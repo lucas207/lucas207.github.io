@@ -9,7 +9,7 @@ body::before {
   right: 0;
   width: 100vw; /* Ajuste conforme o tamanho desejado */
   height: 100vh;
-  background-image: url('207.png'); /* Substitua pelo nome da sua imagem */
+  background-image: url('images/207.png'); /* Substitua pelo nome da sua imagem */
   /* background-repeat: no-repeat; */
   background-position: right center;
   /* background-position: center; */
