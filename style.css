@@ -1,0 +1,210 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw; /* Ajuste conforme o tamanho desejado */
+  height: 100vh;
+  background-image: url('207.png'); /* Substitua pelo nome da sua imagem */
+  /* background-repeat: no-repeat; */
+  background-position: right center;
+  /* background-position: center; */
+  background-size: contain;
+  opacity: 0.03; /* Ajuste a opacidade conforme o efeito desejado */
+  pointer-events: none; /* Garante que não bloqueie cliques */
+  z-index: -2;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Início navbar */
+.navbar {
+    background-color: #333;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 40px;
+    width: auto;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.nav-logo img:hover {
+    transform: scale(1.05);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #512bd4;
+    border-radius: 4px;
+}
+
+.btn-contato {
+    background-color: #ffd700;
+    color: #333;
+    border-radius: 4px;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* Fica atrás de tudo */
+    pointer-events: none;
+    /* Não bloqueia cliques */
+}
+
+/* Fim navbar */
+
+/* inicio header */
+header {
+    height: 92vh;
+    background: linear-gradient(to right, #512bd4, #3a1c9e);
+    /*background-image: url('207.png');
+    background-repeat: no-repeat;
+    background-position: right center;*/
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* padding: 2rem; */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    animation: slideDown 1s ease-out;
+}
+
+header p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    animation: bounce 2s infinite;
+}
+
+.scroll-down span {
+    font-size: 2rem;
+    color: white;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+.highlight {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+/* fim header */
+
+section {
+    scroll-margin-top: 3rem;
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.projects .project-list {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.project {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project a {
+    color: #512bd4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
