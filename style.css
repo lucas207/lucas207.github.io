@@ -14,7 +14,7 @@ body::before {
   background-position: right center;
   /* background-position: center; */
   background-size: contain;
-  opacity: 0.03; /* Ajuste a opacidade conforme o efeito desejado */
+  opacity: 0.04; /* Ajuste a opacidade conforme o efeito desejado */
   pointer-events: none; /* Garante que não bloqueie cliques */
   z-index: -2;
 }
