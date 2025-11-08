@@ -3,20 +3,22 @@ html {
 }
 
 body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100vw; /* Ajuste conforme o tamanho desejado */
-  height: 100vh;
-  background-image: url('images/207.png'); /* Substitua pelo nome da sua imagem */
-  /* background-repeat: no-repeat; */
-  background-position: right center;
-  /* background-position: center; */
-  background-size: contain;
-  opacity: 0.04; /* Ajuste a opacidade conforme o efeito desejado */
-  pointer-events: none; /* Garante que não bloqueie cliques */
-  z-index: -2;
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('images/207.png');
+    /* background-repeat: no-repeat; */
+    background-position: right center;
+    /* background-position: center; */
+    background-size: contain;
+    opacity: 0.04;
+    /* Ajuste a opacidade conforme o efeito desejado */
+    pointer-events: none;
+    /* Garante que não bloqueie cliques */
+    z-index: -2;
 }
 
 body {
@@ -100,16 +102,12 @@ body {
 header {
     height: 92vh;
     background: linear-gradient(to right, #512bd4, #3a1c9e);
-    /*background-image: url('207.png');
-    background-repeat: no-repeat;
-    background-position: right center;*/
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* padding: 2rem; */
     animation: fadeIn 1.5s ease-in-out;
 }
 
@@ -177,13 +175,60 @@ header p {
 
 /* fim header */
 
+
 section {
     scroll-margin-top: 3rem;
     padding: 2rem;
-    max-width: 800px;
+    max-width: 1000px;
     margin: auto;
 }
 
+/* Inicio sobre */
+.about {
+    font-size: 20px;
+    line-height: 36px;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-photo{
+    width: 250px;
+    height: 390px;
+}
+
+.about-photo img {
+    width: 100%;
+    height: 100%;
+    clip-path: circle(60%);
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-photo img {
+        width: 280px;
+    }
+}
+
+/* Fim sobre */
+
+/* Inicio projetos */
 .projects .project-list {
     display: grid;
     gap: 1.5rem;
@@ -201,6 +246,53 @@ section {
     text-decoration: none;
     font-weight: bold;
 }
+
+/* Fim projetos */
+
+/* Inicio My stacks */
+
+.stacks {
+    margin-top: 2rem;
+}
+
+.stack-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    text-align: center;
+}
+
+.stack img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.stack img:hover {
+    transform: scale(1.1);
+}
+
+.stack span {
+    font-weight: bold;
+    color: #512bd4;
+}
+
+.stacks h3 {
+    font-weight: 400;
+    text-align: center;
+}
+
+/* Fim My stacks */
 
 footer {
     background-color: #333;
